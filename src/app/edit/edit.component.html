@@ -1,0 +1,10 @@
+<h1>edit works!</h1>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, magnam!</p>
+
+<div class="container">
+    <input type="text" [(ngModel)]="inputName" maxlength="25" placeholder="new title...">
+    <div class="grid-objects" *ngFor="let todo of todos ">title {{todo.title}}
+        <button class="btn" (click)="editTodo(todo.id, inputName) ">editTodo</button>
+    </div>
+</div>

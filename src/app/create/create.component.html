@@ -1,0 +1,11 @@
+<h1>Create page</h1>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, magnam!</p>
+
+<div class="container">
+    <div class="flex-wrap">
+        <input type="text" [(ngModel)]="inputName" maxlength="25" placeholder="add todo object with title...">
+        <button class="btn" (click)="addTodo()">addTodo</button>
+    </div>
+    <div *ngFor="let todo of todos">title {{todo.title}}</div>
+</div>
