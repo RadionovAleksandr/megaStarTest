@@ -5,7 +5,9 @@
 <div class="container">
     <div class="flex-wrap">
         <input type="text" [(ngModel)]="inputName" maxlength="25" placeholder="add todo object with title...">
-        <button class="btn" (click)="addTodo()">addTodo</button>
+        <div>
+            <button class="btn" (click)="addObj()">add</button>
+        </div>
     </div>
-    <div *ngFor="let todo of todos">title {{todo.title}}</div>
+    <div *ngFor="let obj of abstractObject">title {{obj.title}}</div>
 </div>

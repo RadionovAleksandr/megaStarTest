@@ -4,7 +4,7 @@
 
 <div class="container">
 
-    <div class="grid-objects" *ngFor="let todo of todos">title {{todo.title}}
-        <button class="btn" (click)="removeTodo(todo.id)">removeTodo</button>
+    <div class="grid-objects" *ngFor="let obj of abstractObject">title {{obj.title}}
+        <button class="btn" (click)="remove(obj.id)">removeTodo</button>
     </div>
 </div>

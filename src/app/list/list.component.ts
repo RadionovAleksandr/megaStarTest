@@ -9,11 +9,7 @@ import { TodosService, Todo, Post, AbstractObject } from '../posts.service'
 })
 export class ListComponent implements OnInit {
 
-  todos: Todo[] = []
   abstractObject: AbstractObject[] = []
-
-  isPostActive: boolean = true
-  isTodoActive: boolean = false
 
   constructor(
     private router: Router,
@@ -24,22 +20,13 @@ export class ListComponent implements OnInit {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
     console.log('List Page')
-    console.log(this.todos)
+ 
 
-    if (this.isPostActive) {
-      this.todosService.fetchTodos()
-        .subscribe(todo => {
-          console.log(todo)
-          this.abstractObject = this.todosService.todos = todo
-        })
-    } else if (this.isTodoActive) {
-      this.todosService.fetchPosts()
-      .subscribe(post => {
-        console.log(post)
-        this.abstractObject = this.todosService.posts = post
+    this.todosService.observe()  // fetchTodos()
+      .subscribe(obj => {
+        console.log(obj)
+        this.abstractObject = obj
       })
-    }
-
   }
 
   goToPostsPage() {
