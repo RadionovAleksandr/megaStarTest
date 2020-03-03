@@ -147,6 +147,10 @@
         margin: .5rem 0;
     }
     
+    img {
+        width: 600px;
+    }
+    
     .navbar {
         display: flex;
         justify-content: space-between;
@@ -173,8 +177,6 @@
         }
     }
     
-    // .card-cat {
-    // }
     .card-cat {
         font-size: 30px;
     }
