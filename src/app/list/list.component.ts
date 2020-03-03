@@ -9,7 +9,7 @@ import { TodosService, Todo, Post, AbstractObject } from '../posts.service'
 })
 export class ListComponent implements OnInit {
 
-  abstractObject: AbstractObject[] = []
+  abstractObject: AbstractObject[]
 
   constructor(
     private router: Router,
@@ -20,11 +20,11 @@ export class ListComponent implements OnInit {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
     console.log('List Page')
+    console.log(' abstract object ', this.abstractObject)
  
-
-    this.todosService.observe()  // fetchTodos()
+    this.todosService.observe()  // fetch()
       .subscribe(obj => {
-        console.log(obj)
+        console.log('observe ', obj)
         this.abstractObject = obj
       })
   }

@@ -26,6 +26,8 @@ export class CreateComponent implements OnInit {
             title: this.inputName,
             completed: false
         };
+        this.inputName = ''
+        
         this.todosService.addTodo(newObj)
         .subscribe(obj => {
             console.log(obj);
@@ -37,6 +39,7 @@ export class CreateComponent implements OnInit {
         let newObj: Post = {
             title: this.inputName
         };
+        this.inputName = ''
         this.todosService.addPost(newObj).subscribe(obj => {
             console.log(obj);
             this.abstractObject.push(obj);

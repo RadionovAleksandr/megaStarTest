@@ -52,7 +52,7 @@ export class TodosService {
     }
 
     addPost(post: Post): Observable<Post> {
-        return this.http.post<Post>('https://jsonplaceholder.typicode.com/todos', post)
+        return this.http.post<Post>('https://jsonplaceholder.typicode.com/posts', post)
     }
 
     editTodo(id: number, name: string, ) {

@@ -30,6 +30,7 @@ export class AppComponent implements OnInit {
                 this.abstractObject = this.todosService.todos = todo
                 this.cd.markForCheck()
                 console.log(this.abstractObject)
+                console.log(this.todosService.todos)
             })
     }
 
@@ -37,10 +38,10 @@ export class AppComponent implements OnInit {
         this.todosService.switchPosts(true)
         this.todosService.fetchPosts()
             .subscribe(post => {
-                this.abstractObject = post
+                this.abstractObject = this.todosService.posts = post
                 this.cd.markForCheck()
                 console.log(post)
-                console.log(this.abstractObject)
+                console.log(this.todosService.posts)
             })
     }
 }

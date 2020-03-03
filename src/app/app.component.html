@@ -6,17 +6,20 @@
         <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
             <a [routerLink]="['/']">Home</a>
         </li>
+        <li routerLinkActive="active"><a [routerLink]="['/cat']">cat</a></li>
         <li routerLinkActive="active"><a [routerLink]="['/list']">list</a></li>
         <li routerLinkActive="active"><a [routerLink]="['/create']">create</a></li>
-        <li routerLinkActive="active"><a [routerLink]="['/remove']">remove</a></li>
         <li routerLinkActive="active"><a [routerLink]="['/edit']">edit</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/remove']">remove</a></li>
     </ul>
+
 </nav>
 <div class="wrap-container">
     <div class="container sidebar">
+        <h1 class="sidebar-title">SideBar</h1>
         <div>
-            <span (click)="fetchTodos()">Departments </span><br>
-            <span (click)="fetchPosts()">Employees</span>
+            <a (click)="fetchTodos()">Departments </a><br>
+            <a (click)="fetchPosts()">Employees</a>
         </div>
     </div>
 
@@ -24,5 +27,6 @@
         <div class="card">
             <router-outlet></router-outlet>
         </div>
+
     </div>
 </div>
